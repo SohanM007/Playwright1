@@ -17,15 +17,12 @@ Allure reports -- advance report.
         Execute the file atleast for one time
         post execution the allure-result folder will get created.
         open the allure report using below command -
-      //       npx allure serve allure-result
+      //       npx allure serve allure-results
 
   now run the below command in terminal ::
-  //npx allure generate allure-result  --clean-o allure-report
+      //npx allure generate allure-results --clean -o allure-report
   New folder allure report will get created
   copy the history folder from allure and past it inside the allure-results
   for history or treands details.
-  
 
-
-          
 */

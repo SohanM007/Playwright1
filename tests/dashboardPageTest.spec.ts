@@ -4,13 +4,15 @@ import { DashboardPage } from '../pages/dashboardPage'
 
 const url = "https://rahulshettyacademy.com/client/#/auth/login"
 let email = 'm82525906@gmail.com'
-let password = '1200430131'
+let password = 'Sohan4@gmail'
 let productName = "ADIDAS ORIGINAL"
 
+//refrence value 
 let lp:LoginPage
 let dp: DashboardPage
 
 test.beforeEach(async({page})=>{
+  //creating object of the class
   lp = new LoginPage(page)
   dp = new DashboardPage(page)
       await lp.launchUrl(url)

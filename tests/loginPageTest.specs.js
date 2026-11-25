@@ -8,14 +8,14 @@ let password ='sohan4@gmail'
 let errormessage ="Incorrect email or password."
 let invalidPassword ='sohanasfddaf'
 
-
+//javascript code 
 let lp
-test.beforeEach(async ({page})=>{
-  lp =new credentials(page)
+test.beforeEach(async({page})=>{
+  lp = new credentials(page)
    await lp.launchUrl(url)
 })
 
-test('valid login',async({page})=>{
+test('valid login',async({})=>{
 
   // const lp = new LoginPage(page)
   // await lp.launchUrl(url)
@@ -23,7 +23,7 @@ test('valid login',async({page})=>{
   await expect(lp.homePageIdentifier).toBeVisible()
 })
 
-test('invalid login',async({page})=>{
+test('invalid login',async({})=>{
   // const lp = new LoginPage(page)
   // await lp.launchUrl(url)
   await lp.loginIntoApplication(email,invalidPassword)
@@ -33,3 +33,7 @@ test('invalid login',async({page})=>{
 */
 
 //to run program - npx playwright test tests/loginTestPage
+
+//inside typescript you can use javascript but inside javascript you cant use javascript cuz typescript was devloped on javascript 
+
+//mostly we use typescript cuz its more secure language 

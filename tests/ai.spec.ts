@@ -23,13 +23,16 @@
 */
 
 //different Ai agents:
-/*
-Github copilot chat
+/* 
+download extentions - 
+Github copilot chat - mostly we use this  
 Gemini code assist
 codex
 claude code for vs code
-playwright mcp   - search on google  - click on vscode 
-playwright agents  - search on google 
+playwright mcp   - search on google  - click on vscode - its will take you too vs code where you can see playwright extention just install it .
+                                       then open the AI chat click on configure tool which is next to "balance" check the playwright playwright check box 
+playwright agents  - search on google  - copy - npx playwright init-agent --loop-vscode  and past it in vs terminal .
+
 Gemini code assist 
 IDE:: Cursor,Antigravity,Codex
 

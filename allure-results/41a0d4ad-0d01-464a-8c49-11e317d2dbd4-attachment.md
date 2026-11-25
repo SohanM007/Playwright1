@@ -1,0 +1,20 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: DDTUsingExcel.spec.ts >> Add an item to cart ZARA COAT 3
+- Location: tests\DDTUsingExcel.spec.ts:33:7
+
+# Error details
+
+```
+Error: locator.fill: value: expected string, got undefined
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```

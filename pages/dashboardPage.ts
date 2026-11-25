@@ -3,7 +3,7 @@
 import { Locator,Page } from "@playwright/test";
 
 export class DashboardPage {
- 
+  //object creation
       page:Page
       products:Locator
       homePageProductPrice:Locator
@@ -33,16 +33,15 @@ export class DashboardPage {
            //first capture all the text/name of the product present on the page
            //below locator chaining mechanism is used
          const productText = await this.products.nth(i).locator('b').textContent()
-         if(productText?.trim().toLowerCase() === productName.trim().toLowerCase() ){
+         if(productText?.trim().toLowerCase() === productName.trim().toLowerCase()){
             await this.products.nth(i).locator('button').nth(index).click()
-
             break
 
          }
       }
 
   }
-  async navigateToCart(){
+  async navigateToCart(){ 
     await this.cart.click()
   }
 }

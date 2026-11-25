@@ -5,7 +5,7 @@ setup -- setting up of process
 teardown -- closing of process
 
 Different hooks in playwright
-1.test.beforeAll() --- it will get executed before any of the testcase(if you have 10 different test case before all will get executed only once)
+1.test.beforeAll() --- it will get executed before any of the testcase(if you have 10 different testcase thenafte 6 before all will get executed only once)
      Example : Db connection, initiating logs
 2.test.beforeEach() -- it will run once before running each and every testcase
     if you have 10 testcase then it will 10 time  //we used it most of the time

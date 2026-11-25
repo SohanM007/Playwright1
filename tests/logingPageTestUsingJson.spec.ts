@@ -21,3 +21,10 @@ test('invalid login',async({page})=>{
 
 
 //practice this 2-3 times
+
+//me :i have developed frame work from scrach. 
+//interviewer : which framework?
+//me: hybrid Framework
+//interviewer: what is hybrideFramework ?
+//me : since playwright automation is a framework .we have applied form as a design pattern using that we have created
+//       different layers inside the folder and those layers and with those layers we will able to write the automation

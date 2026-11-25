@@ -1,0 +1,84 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: logingPageTestUsingJson.spec.ts >> invalid login
+- Location: tests\logingPageTestUsingJson.spec.ts:17:5
+
+# Error details
+
+```
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://rahulshettyacademy.com/client/#/auth/login", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  | //this is called as login page class
+  2  | //here all the locator and methods belongs to login page will be written here
+  3  | 
+  4  | import { Locator,Page } from "@playwright/test";
+  5  | //we are importing loactor and page thats why we are using loactor and page instead of test and expect cuz we are to writting test case.
+  6  | 
+  7  | //import -importing file/data from library
+  8  | 
+  9  | // its a object which written below
+  10 | export class LoginPage {
+  11 |   //every locator present on the page must be written here 
+  12 |   page:Page
+  13 |   email:Locator
+  14 |   password:Locator
+  15 |   loginButton:Locator
+  16 |   errorMessage:Locator
+  17 |   homePageIdentifier:Locator
+  18 | 
+  19 | //create the constructor
+  20 | //all locator goes inside the constructor
+  21 | //whenever we create class we called constructor first
+  22 |    constructor(page:Page){  //page => on Login page(tests/loginTestPage.spec.ts) we have created one page fixture that we are intiallizing here 
+  23 |        this.page = page
+  24 |        this.email =this.page.getByPlaceholder('email@example.com')
+  25 |        this.password =this.page.locator('#userPassword')
+  26 |        this.loginButton = this.page.locator('#login')
+  27 |        this.errorMessage = this.page.locator('#toast-container')
+  28 |        this.homePageIdentifier =this.page.locator('[routerlink ="/dashboard/"]')
+  29 | 
+  30 | }
+  31 |  
+  32 | //method or action 
+  33 | //any hardcoded value will not be present inside your testclass
+  34 | async launchUrl(url:string){ //we create the method with async keyword followed by method name~~
+> 35 |   await this.page.goto(url)
+     |                   ^ Error: page.goto: Target page, context or browser has been closed
+  36 | }
+  37 | async loginIntoApplication(username:string,password:string){
+  38 |    await this.email.fill(username)
+  39 |    await this.password.fill(password)
+  40 |    await this.loginButton.click()
+  41 | 
+  42 |    //another way to wright the same is 
+  43 |    /*
+  44 |    async login(username:string){
+  45 |     await this.email.fill(username)
+  46 |    }
+  47 |   async pass(password:string){
+  48 |   await this.email.fill(password)
+  49 |   }
+  50 |   async loginButton(loginButton:string){
+  51 |   await this.email.fill(loginButton)
+  52 |   }
+  53 | 
+  54 |    */
+  55 | 
+  56 | 
+  57 | }
+  58 | 
+  59 | }
+```
