@@ -19,7 +19,7 @@ Github is web based version control used by Devops pipeline setup and by dev tea
      > git commit -m "first commit"
      > git branch -M main
      > git remote add origin https://github.com/SohanM007/Playwright.git
-     > git push -u origin main (push all the changes to the main branch)
+     > git push -u origin main  (push all the changes to the main branch)
 
      //There is already and github account created and you need to clone it.
      //for practice purpose we have to branch :-
@@ -31,15 +31,15 @@ Github is web based version control used by Devops pipeline setup and by dev tea
   When branch is already created follow the below steps ::
   1.clone the repository in your local system(laptop).
      git clone <repository url>    //goto github >> click on the code >> copy the url and paste it in the terminal.
-     git clone https://github.com/SohanM007/Playwright.git
+         ( git clone https://github.com/SohanM007/Playwright.git )
   2. After clone is completed,we need to install below dependencies in the vs code terminal ::
      npm install
      npm  init playwright
   3. Now make the changes in the code and push it to the github repository.
-     *** you never push the code directly to the main branch. 
-     first you need to create a new branch inside the local system using below command ::
+       *** you never push the code directly to the main branch. 
+start from here =>   //first you need to create a new branch inside the local system using below command ::
      git checkout -b <branch name>  //create a new branch and switch to that branch.
-     git checkout -b TestPWFrameWork
+      (git checkout -b TestPWFrameWork)
   4. check id the branch is created or not using below command ::
       git branch
   5. Now make some changes to the code and push the changes to the github repository using below command ::
